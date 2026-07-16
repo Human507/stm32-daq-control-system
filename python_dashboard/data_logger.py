@@ -1,7 +1,7 @@
 import csv
-class log_data:
+class DataLogger:
     def __init__(self, filename):
         self.filename = filename
-        #self.file = ...
-        #self.writer = ...
+        self.file = open(filename, 'w')
+        self.writer = csv.writer(self.file)
         self.header_written = False
