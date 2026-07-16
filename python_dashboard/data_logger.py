@@ -7,6 +7,7 @@ class DataLogger:
         self.header_written = False
     def log(self, content):
         self.writer.writerow(content)
+        self.file.flush()
     def close(self):
         self.file.close()
 
